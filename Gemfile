@@ -31,6 +31,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails' , :group => :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Use gon to pass data to the frontend
+gem 'gon'
+
+gem 'email_validator'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

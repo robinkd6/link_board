@@ -1,2 +1,8 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= @post.title %><br><br>
+    &mdash; <strong><%= @post.link %></strong> <%= @post.user_id %>
+  </div>
+  <%= link_to 'delete', @post, :class => 'js-delete-btn btn btn-danger', :data => {:request_type => 'html'} %>
+</div>
+<%= link_to 'Home', '/', :class => 'btn btn-primary'  %>
