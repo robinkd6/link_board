@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	validates :email,
+	format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create },
 	presence: true,
 	uniqueness: {case_senstive: false}
 
@@ -9,7 +10,7 @@ class User < ActiveRecord::Base
 		maximum: 20,
 		too_long: "The maximum is 20 characters "
 	}
-	
+
 	#validates the presence of the password on create
 	validates_presence_of :password, on: :create
 

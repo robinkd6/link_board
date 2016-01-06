@@ -39,7 +39,7 @@ post "/signup" => "users#create"
 get "/" => "posts#index"
 get "/posts/new" => "posts#new"
 
-posts "/posts" => "posts#create"
+post "/posts" => "posts#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
